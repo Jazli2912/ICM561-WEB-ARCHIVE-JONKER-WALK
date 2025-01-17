@@ -1,0 +1,217 @@
+/* Body background and overall styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('../images/BACKGROUND JONKER.webp') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+  background-color: rgba(0, 0, 0, 0.7); /* Slight transparency for readability */
+  color: white;
+  padding: 10px 20px;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar li {
+  margin: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Welcome Container */
+.welcome-container {
+  text-align: center;
+  margin-top: 20%;
+  animation: fadeIn 3s ease-in-out; /* Fade-in animation for the welcome container */
+}
+
+.welcome-text {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: slideIn 2s ease-in-out; /* Sliding animation for text */
+}
+
+/* Button Styling */
+.animated-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.animated-button:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.animated-button:active {
+  background-color: #f4f4f4;
+  color: black;
+  transform: scale(0.95); /* Shrink slightly on click */
+}
+
+/* HTTRACK Container Styling */
+.httrack-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+}
+
+/* HTTRACK Box Styling */
+.httrack-box {
+  width: 300px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInContainer 1s ease-in-out; /* New fade-in animation */
+}
+
+.httrack-box h2 {
+  margin: 0;
+  font-size: 24px;
+  background-color: yellow; /* Highlight effect */
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.httrack-box p {
+  font-size: 16px;
+  margin: 10px 0;
+  background-color: yellow; /* Highlight effect */
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.httrack-box button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.httrack-box button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Hover Animation for Containers */
+.httrack-box:hover {
+  transform: scale(1.05); /* Slight zoom-in effect */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5); /* Enhanced shadow effect */
+}
+
+/* Keyframes for Fade-in Animation */
+@keyframes fadeInContainer {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly lower */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End in original position */
+  }
+}
+
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 100%;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
